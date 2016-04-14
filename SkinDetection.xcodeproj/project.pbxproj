@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E532FAB11CBF77B0000AE1F1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E532FAB01CBF77B0000AE1F1 /* main.cpp */; };
+		E532FAB91CBF7851000AE1F1 /* SkinDetection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E532FAB71CBF7851000AE1F1 /* SkinDetection.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		E532FAAD1CBF77B0000AE1F1 /* SkinDetection */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SkinDetection; sourceTree = BUILT_PRODUCTS_DIR; };
 		E532FAB01CBF77B0000AE1F1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E532FAB71CBF7851000AE1F1 /* SkinDetection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SkinDetection.cpp; sourceTree = "<group>"; };
+		E532FAB81CBF7851000AE1F1 /* SkinDetection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SkinDetection.hpp; sourceTree = "<group>"; };
+		E532FABB1CBF7A0B000AE1F1 /* Resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resource; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 		E532FAA41CBF77B0000AE1F1 = {
 			isa = PBXGroup;
 			children = (
+				E532FABB1CBF7A0B000AE1F1 /* Resource */,
 				E532FAAF1CBF77B0000AE1F1 /* SkinDetection */,
 				E532FAAE1CBF77B0000AE1F1 /* Products */,
 			);
@@ -58,6 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				E532FAB01CBF77B0000AE1F1 /* main.cpp */,
+				E532FAB71CBF7851000AE1F1 /* SkinDetection.cpp */,
+				E532FAB81CBF7851000AE1F1 /* SkinDetection.hpp */,
 			);
 			path = SkinDetection;
 			sourceTree = "<group>";
@@ -118,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E532FAB91CBF7851000AE1F1 /* SkinDetection.cpp in Sources */,
 				E532FAB11CBF77B0000AE1F1 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +215,31 @@
 		E532FAB51CBF77B0000AE1F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /opt/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+					/usr/local/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-lopencv_calib3d",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_ml",
+					"-lopencv_objdetect",
+					"-lopencv_photo",
+					"-lopencv_shape",
+					"-lopencv_stitching",
+					"-lopencv_superres",
+					"-lopencv_ts",
+					"-lopencv_video",
+					"-lopencv_videoio",
+					"-lopencv_videostab\n",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -214,6 +247,31 @@
 		E532FAB61CBF77B0000AE1F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /opt/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+					/usr/local/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-lopencv_calib3d",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_ml",
+					"-lopencv_objdetect",
+					"-lopencv_photo",
+					"-lopencv_shape",
+					"-lopencv_stitching",
+					"-lopencv_superres",
+					"-lopencv_ts",
+					"-lopencv_video",
+					"-lopencv_videoio",
+					"-lopencv_videostab\n",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
